@@ -20,7 +20,7 @@ app.get(["/api", "/api/:date"], (req, res) => {
 
   if (dateParam === undefined) {
     date = new Date();
-  } else if (/^\\d+$/.test(dateParam)) {
+  } else if (/^\d+$/.test(dateParam)) {
     date = new Date(Number(dateParam));
   } else {
     date = new Date(dateParam);
